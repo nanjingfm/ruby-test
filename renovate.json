@@ -1,0 +1,34 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["config:recommended"],
+    "baseBranches": ["main"],
+    "labels": ["dependencies"],
+    "dependencyDashboardOSVVulnerabilitySummary": "all",
+    "vulnerabilityAlerts": {
+      "enabled": true
+    },
+    "enabledManagers": ["bundler"],
+    "osvVulnerabilityAlerts": true,
+    "postUpdateOptions": ["gomodTidy","bundlerConservative","npmDedupe"],
+    "logLevelRemap": [
+      {
+        "matchMessage": "/^Rubygems/",
+        "newLogLevel": "trace"
+      },
+      {
+        "matchMessage": "/vuln/",
+        "newLogLevel": "trace"
+      }
+    ],
+    "packageRules": [
+      {
+        "matchPackageNames": ["*"],
+        "enabled": false,
+        "automerge": false
+      },
+      {
+        "matchPackageNames": ["*"],
+        "groupName": "aaaaa"
+      }
+    ]
+  }
