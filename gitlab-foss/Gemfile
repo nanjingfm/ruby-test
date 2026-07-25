@@ -358,7 +358,7 @@ gem 'sanitize', '~> 6.0.2', feature_category: :shared
 gem 'babosa', '~> 2.0', feature_category: :shared
 
 # Sanitizes SVG input
-gem 'loofah', '~> 2.24.0', feature_category: :shared
+gem 'loofah', '~> 2.25.0', feature_category: :shared
 
 # Used to provide license templates
 gem 'licensee', '~> 9.16', feature_category: :shared
